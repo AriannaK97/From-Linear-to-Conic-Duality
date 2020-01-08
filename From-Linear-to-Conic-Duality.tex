@@ -17,9 +17,39 @@
   	\tableofcontents
   	\section{Introduction}
   	
-  	Linear Programming (LP) models cover numerous applications. Whenever applicable, LP allows to obtain useful quantitative and qualitative information on the problem at hand. The specific analytic structure of LP programs gives rise to a number of general results, which provide us in many cases with valuable insight and understanding. This analytic structure underlies some specific computational techniques for LP, which by now are perfectly well developed, allowing us to solve routinely quite large LP programs. However, there are situations in reality which cannot be covered by the LP models. To handle these "essentially nonlinear" cases, one needs to extend the basic theoretical result and computational techniques known for LP beyond the bounds of Linear Programming.\par
-  	The widest class of optimization problems to which the basic results of LP were extended, is the class of convex optimization problems. \par
+  	\par Linear Programming (LP) models cover numerous applications. Whenever applicable, LP allows to obtain useful quantitative and qualitative information on the problem at hand. The specific analytic structure of LP programs gives rise to a number of general results, which provide us in many cases with valuable insight and understanding. This analytic structure underlies some specific computational techniques for LP, which by now are perfectly well developed, allowing us to solve routinely quite large LP programs. However, there are situations in reality which cannot be covered by the LP models. To handle these "essentially nonlinear" cases, one needs to extend the basic theoretical result and computational techniques known for LP beyond the bounds of Linear Programming.\par
+  	The widest class of optimization problems to which the basic results of LP were extended, is the class of convex optimization problems. Below, follows a definition of a general convex optimization problem. This definition is not the traditional, but it suits well to the applications we intend to cover.\par 
   	When passing from a generic LP problem 
-  	$$min_x$$
+  	$$\max\limits_{x} \{ c^T x | Ax \geq b \} \quad [A: m \times n] \quad (LP)$$
+  	to its nonlinear extensions, we should expect to encounter some nonlinear components in the
+    problem. The traditional way here is to say that in (LP), there are a linear objective function $f(x) = c^T x$ and inequality constraints $f_i (x) \geq b_i$ with linear functions $f_i (x) = a_i^T x,\quad i = 1, ..., m$. Let us allow some/all of these functions $f, f_1 , ..., f_ m$ to be nonlinear. In contrast to this traditional way, we intend to keep the objective and the constraints linear, but introduce “non-linearity” in the inequality sign $\geq$.
+    
+    \section{What is Conic Duality?}
+    \par Apart from the algorithmic issues, the most important result in LP is the LP Duality Theorem. This theorem, can be extended further to cover convex and conic problems, the latter being a subcategory of the former. \par
+    The source of the LP Duality Theorem was the desire to get in a systematic way a lower bound on the
+    optimal value $c^*$ in an LP program
+    $$c^* = \min\limits_{x} \{ c^T x | Ax \geq b \}. \quad (LP)$$
+    The bound was obtained by looking at the inequalities of the type 
+    $$\langle \lambda, Ax\rangle \equiv \lambda^T Ax \geq \lambda^T b \quad (Cons(\lambda))$$
+    with weight vectors $\lambda \geq 0$. This type of inequality is, by its origins, a consequence of the system of constraints $Ax \geq b$ of LP, i.e., it is satisfied at every solution to the system. As a consequence, whenever we are lucky to get, as the left hand side of $(Cons(\lambda))$, the expression $c^T x$, i.e., whenever a nonnegative weight vector $\lambda$ satisfies the relation 
+    $$A^T \lambda = c,$$
+    then, the inequality $(Cons(\lambda))$ produces a lower bound $b^T \lambda$ on the optimal value in LP 
+    and the dual problem 
+    $$max \{b^T \lambda : \lambda \geq 0, A^T \lambda = c\}$$
+    was nothing but the problem of finding the best lower bound one can get in this fashion.\par
+    Coming to thing of a conic problem, the same strategy can be used to develop its dual
+    $$\min \{ c^T x | Ax \geq \kappa^b \}, \quad K \subset E \quad (CP)$$
+    At this point, we need to clarify the following step:\newline
+    \textit{What are the “admissible” weight vectors $\lambda$, i.e., the vectors such that the scalar 
+    inequality?}
+    $$\langle \lambda, Ax\rangle \geq \langle \lambda, b\rangle$$
+    \textit{is a consequence of the vector inequality} $Ax \geq \kappa^b ?$ \newline \newline
+    In the particular case of coordinate-wise partial ordering, i.e., in the case of $E = R^m , K = R_+^m $, 
+    the admissible vectors were those with nonnegative coordinates. These vectors, however, not necessarily 
+    are admissible for an ordering $\geq \kappa$ when $K$ is different from the nonnegative orthant:
+    
+    
+    \section{Applications of Conic Duality }
+    \par The applications of the extension of LP are various. 
 
 \end{document}
