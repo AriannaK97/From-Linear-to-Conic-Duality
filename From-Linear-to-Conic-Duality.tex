@@ -15,6 +15,7 @@
 	\maketitle{}
   	\pagenumbering{arabic}
   	\tableofcontents
+  	\newpage
   	\section{Introduction}
   	
   	\par Linear Programming (LP) models cover numerous applications. Whenever applicable, LP allows to obtain useful quantitative and qualitative information on the problem at hand. The specific analytic structure of LP programs gives rise to a number of general results, which provide us in many cases with valuable insight and understanding. This analytic structure underlies some specific computational techniques for LP, which by now are perfectly well developed, allowing us to solve routinely quite large LP programs. However, there are situations in reality which cannot be covered by the LP models. To handle these "essentially nonlinear" cases, one needs to extend the basic theoretical result and computational techniques known for LP beyond the bounds of Linear Programming.\par
@@ -36,8 +37,8 @@
     then, the inequality $(Cons(\lambda))$ produces a lower bound $b^T \lambda$ on the optimal value in LP 
     and the dual problem 
     $$max \{b^T \lambda : \lambda \geq 0, A^T \lambda = c\}$$
-    was nothing but the problem of finding the best lower bound one can get in this fashion.\par
-    Coming to thing of a conic problem, the same strategy can be used to develop its dual
+    was nothing but the problem of finding the best lower bound one can get in this way.\par
+    Coming to think of a conic problem, the same strategy can be used to develop its dual
     $$\min \{ c^T x | Ax \geq \kappa^b \}, \quad K \subset E \quad (CP)$$
     At this point, we need to clarify the following step:\newline \newline
     \textit{What are the “admissible” weight vectors $\lambda$, i.e., the vectors such that the scalar 
@@ -48,7 +49,12 @@
     the admissible vectors were those with nonnegative coordinates. These vectors, however, not necessarily 
     are admissible for an ordering $\geq \kappa$ when $K$ is different from the nonnegative orthant:
     
-    
+    \section{Geometry of Primal and Dual Problems}
+    In this section we will consider problems of minimizing a linear functions $c^Tx$ in $n$ variables $x$, subject to the constraints below
+    $$Ax \leq b,$$ $$x \geq 0$$
+    (inequality form) or
+    $$Ax = b, $$ $$ x \geq 0$$
+    (equality form).0
     \section{Applications of Conic Duality }
     \par The applications of the extension of LP are various. 
 
