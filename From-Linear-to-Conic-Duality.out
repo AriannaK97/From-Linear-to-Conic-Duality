@@ -1,4 +1,10 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{What is Conic Duality?}{}% 2
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.3}{Geometry of Primal and Dual Problems}{}% 3
 \BOOKMARK [1][-]{section.4}{Applications of Conic Duality }{}% 4
+=======
+\BOOKMARK [1][-]{section.3}{Applications of Conic Duality }{}% 3
+\BOOKMARK [1][-]{section.4}{Conic Duality Theorem}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Symmetry}{section.4}% 5
+>>>>>>> master
