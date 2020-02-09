@@ -1,5 +1,5 @@
 # From-Linear-to-Conic-Duality
-Team Project for the class Algorithmic and Operational Research of the winter semester 2019-2020 
+Team Project for the course Algorithmic and Operational Research of the winter semester 2019-2020 
 
 ### Contributors
 
